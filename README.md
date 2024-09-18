@@ -4,7 +4,8 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+This lab outlines a hands-on project for implementing an on-premises Active Directory (AD) environment using Azure Virtual Machines (VMs). The goal is to create a resource group in Azure containing two VMs, both within the same virtual network. One VM will serve as the Domain Controller (DC), providing Active Directory services, and the other VM will be a Client machine that joins the domain. The project involves setting up centralized credential management via AD and ensuring that network traffic is routed through the Domain Controller, allowing monitoring and detection of suspicious activity.
+<br /><br />
 
 
 
@@ -23,12 +24,25 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+<h2>Key Components:</h2>
 
-- Creation of Virtual Machines In Microsoft Azure
-- Using Server Manager to install Active Directory 
-- Simulated adding users to Active Directory
-  
+Domain Controller (DC) VM:
+ - Runs Active Directory Domain Services (AD DS).
+ - Uses a static IP address for consistent DNS services.
+ - Acts as a DNS server for the virtual network.
+ - Provides centralized credential management for devices in the domain.
+
+Client Machine VM:
+ - Joins the domain managed by the DC.
+ - Configures DNS settings to use the DC’s IP address as the primary DNS server.
+
+PowerShell Script:
+ - Generates 1,000 users in Active Directory to simulate a production environment.
+
+Traffic Routing and Monitoring:
+ - The AD system monitors network traffic.
+ - All internet traffic from devices (clients) is routed through the Domain Controller.
+ - Administrators monitor network activity and can identify suspicious logs.
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -36,9 +50,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![image]()
 
+
 </p>
-<p>
-Active Directory is a software that allow you to manage resources like computers and printers within a network. It is a centralized system for network administrators to manage and store information about resouces and users on a network. Here is demonstration of me setting up a Domain Controller (DC-1) machine and Windows 10 (Client-1) machine in Microsoft Azure to begin setting up Active Directory.
+Here is a demonstration of me setting up the resource group, Domain Controller (DC-1) machine and Windows 10 (Client-1) machine in Microsoft Azure to begin setting up Active Directory.
 </p>
 <br />
 
