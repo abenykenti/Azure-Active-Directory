@@ -53,9 +53,13 @@ Traffic Routing and Monitoring:
 ![image]()
 
 Set Up Azure Resources:
-Create a Resource Group to house the VMs and the virtual network.
-Set up a Virtual Network (VNet) that the VMs will use to communicate.
+- Create a Resource Group to house the VMs and the virtual network.
+
+![image](https://github.com/user-attachments/assets/137cae6f-a387-4dc6-838f-ce5711cd5afa)
+
+- Set up a Virtual Network (VNet) that the VMs will use to communicate.
 ![image]()
+
 
 Create the Domain Controller (DC) VM:
 In Azure, deploy a Windows Server VM that will function as your DC.
