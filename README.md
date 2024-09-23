@@ -7,7 +7,7 @@
 This lab outlines a hands-on project for implementing an on-premises Active Directory (AD) environment using Azure Virtual Machines (VMs). The goal is to create a resource group in Azure containing two VMs, both within the same virtual network. One VM will serve as the Domain Controller (DC), providing Active Directory services, and the other VM will be a Client machine that joins the domain. The project involves setting up centralized credential management via AD and ensuring that network traffic is routed through the Domain Controller, allowing monitoring and detection of suspicious activity.
 <br /><br />
 
-
+![image](https://github.com/user-attachments/assets/7ed42b43-6042-49c4-94da-f567aceaa7d0)
 
 
 
@@ -50,9 +50,36 @@ Traffic Routing and Monitoring:
 
 ![image]()
 
+Set Up Azure Resources:
+Create a Resource Group to house the VMs and the virtual network.
+Set up a Virtual Network (VNet) that the VMs will use to communicate.
+![image]()
 
-</p>
-Here is a demonstration of me setting up the resource group, Domain Controller (DC-1) machine and Windows 10 (Client-1) machine in Microsoft Azure to begin setting up Active Directory.
+Create the Domain Controller (DC) VM:
+In Azure, deploy a Windows Server VM that will function as your DC.
+Assign a static IP address to the VM for DNS consistency.
+Install Active Directory Domain Services (AD DS) and promote the VM to a Domain Controller.
+Configure the VM as a DNS server. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. This is a demonstration of me Using Wizard to install Active Directory.
+![image]()
+
+Create the Client Machine VM:
+Deploy another Windows VM for the client.
+Join this VM to the domain controlled by the DC.
+Configure the client’s DNS settings to point to the DC’s static IP.
+![image]()
+
+PowerShell Script for User Creation:
+Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. This is an example of me creating users in Active Directory Domain Controller using Power Shell ISE. Write and run a PowerShell script to create 1,000 user accounts in Active Directory. Example script:
+powershell
+
+Ensure all users are created in a specific Organizational Unit (OU) for easier management.
+![image]()
+
+Configure Network Traffic Routing:
+Set up policies on the DC to route all internet traffic from the client machines through the Domain Controller.
+This can be done using Group Policy settings for DNS forwarding, firewall rules, and network traffic rules.
+
+
 </p>
 <br />
 
@@ -72,6 +99,7 @@ When using Wizard to install Active Directory checks are done to see if the serv
 
 </p>
 <p>
-Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. This is an example of me creating users in Active Directory Domain Controller using Power Shell ISE.
+<h2>Conclusion:</h2>
+Active Directory is key for helping organizations manage network traffic and protect against unauthorized access. This project walks through a full Active Directory setup, covering traffic routing, managing user credentials, and monitoring network activity. It demonstrates essential skills for anyone looking to get hands-on experience with network and security management.
 </p>
 <br />
