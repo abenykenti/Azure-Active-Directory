@@ -50,22 +50,24 @@ Traffic Routing and Monitoring:
 
 <p>
 
-![image]()
-
 Set Up Azure Resources:
 - Create a Resource Group to house the VMs and the virtual network.
 
 ![image](https://github.com/user-attachments/assets/137cae6f-a387-4dc6-838f-ce5711cd5afa)
 
 - Set up a Virtual Network (VNet) that the VMs will use to communicate.
-![image]()
 
+ ![image](https://github.com/user-attachments/assets/b048c013-bff5-48c5-834a-4232f139f57a)
+
+ ![image](https://github.com/user-attachments/assets/c34b05a9-b826-494f-91d8-8254fd077c8f)
 
 Create the Domain Controller (DC) VM:
-In Azure, deploy a Windows Server VM that will function as your DC.
-Assign a static IP address to the VM for DNS consistency.
-Install Active Directory Domain Services (AD DS) and promote the VM to a Domain Controller.
-Configure the VM as a DNS server. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. This is a demonstration of me Using Wizard to install Active Directory.
+
+- In Azure, deploy a Windows Server VM that will function as your DC. Assign a static IP address to the VM for DNS consistency.
+- Install Active Directory Domain Services (AD DS) and promote the VM to a Domain Controller.
+- Configure the VM as a DNS server. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. This is a demonstration of me Using Wizard to install Active Directory.
+
+- 
 ![image]()
 
 Create the Client Machine VM:
