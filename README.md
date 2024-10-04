@@ -115,12 +115,14 @@ Create the Domain Controller (DC) VM:
 
   ![image](https://github.com/user-attachments/assets/7de3820d-43d4-4dfc-862e-9cf1c808fe5b)
 
-- Create a Domain Admin user within the domain
- - n Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
+- Create Employees and Admins within the domain
+  - In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
 
  ![image](https://github.com/user-attachments/assets/6e872265-d359-4aff-9e87-60c2a904b025)
 
  ![image](https://github.com/user-attachments/assets/e4c1fc2f-f5ff-4a0e-8134-483956292187)
+
+ - Create a new OU named “_ADMINS”
 
  ![image](https://github.com/user-attachments/assets/77d4a286-9d48-474b-986d-cdb023181a88)
 )
