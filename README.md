@@ -93,49 +93,85 @@ Create the Domain Controller (DC) VM:
 
   ![image](https://github.com/user-attachments/assets/50134a9c-963c-4903-8e4e-4c93e331012a)
 
-
   
-- Configure the VM as a DNS server. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. This is a demonstration of me Using Wizard to install Active Directory.
+- AD is installed but not configured. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. 
 
-   ![image]()
-   ![image]()
-   ![image]()
-   ![image]()
+- Setup a new forest as mydomain.com (can be anything)
+    ![image](https://github.com/user-attachments/assets/8c015f29-c0b9-445a-8ea1-0ed52e1b06e1)
+
+    ![image](https://github.com/user-attachments/assets/2a8ca9a5-ab30-433a-943c-fae1af173488)
+
+    ![image](https://github.com/user-attachments/assets/5d7f0f78-423c-4f19-8ff8-927b229fd468)
+
+    ![image](https://github.com/user-attachments/assets/da8ff662-3a77-455d-931d-96a015166e79)
+
+    ![image](https://github.com/user-attachments/assets/80a4489d-dcbb-4119-8a16-0ef5071510b8)
+
+   ![image](https://github.com/user-attachments/assets/07014171-246e-470b-bc88-8800de4ea580)
+
+   ![image](https://github.com/user-attachments/assets/fd9730a8-08aa-40e5-957e-6f3d090959a8)
+
+  ![image](https://github.com/user-attachments/assets/398a6570-af90-4f99-b966-90b40b56bdbd)
+
+  ![image](https://github.com/user-attachments/assets/7de3820d-43d4-4dfc-862e-9cf1c808fe5b)
+
+- Create a Domain Admin user within the domain
+ - n Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
+
+ ![image](https://github.com/user-attachments/assets/6e872265-d359-4aff-9e87-60c2a904b025)
+
+ ![image](https://github.com/user-attachments/assets/e4c1fc2f-f5ff-4a0e-8134-483956292187)
+
+ ![image](https://github.com/user-attachments/assets/77d4a286-9d48-474b-986d-cdb023181a88)
+)
+ ![image](https://github.com/user-attachments/assets/d11e6092-22c9-4c97-a752-266cbbd8f5fa)
+
+ ![image](https://github.com/user-attachments/assets/cd49b67e-dec2-400b-9d1a-882cc81f9e43)
+
+ ![image](https://github.com/user-attachments/assets/eee47533-49f1-4d17-9e5b-2624aad56d51)
+
+ ![image](https://github.com/user-attachments/assets/dc8ecf3e-295e-402e-895d-2b72f65420aa)
+
+ ![image](https://github.com/user-attachments/assets/42da13ff-e9e0-4235-85ad-bfb22bc76bb5)
+
+ ![image](https://github.com/user-attachments/assets/6c88bdcb-e602-4bd5-b949-39a4a0fe2f48)
+
+ ![image](https://github.com/user-attachments/assets/c4cf1d4d-3615-4d12-b846-b5c756fb37af)
+
+![image]()
+![image]()
+![image]()
+![image]()
 
 Create the Client Machine VM:
 - Deploy another Windows VM for the client.
   
- ![image](https://github.com/user-attachments/assets/98460eff-ab81-4b22-9283-23d70c7e1cd9)
- ![image](https://github.com/user-attachments/assets/1cf36e37-6282-4780-a9e3-05cdb23c5c36)
+  ![image](https://github.com/user-attachments/assets/98460eff-ab81-4b22-9283-23d70c7e1cd9)
+  ![image](https://github.com/user-attachments/assets/1cf36e37-6282-4780-a9e3-05cdb23c5c36)
 
 Join this VM to the domain controlled by the DC.
 - Configure the client’s DNS settings to point to the DC’s static IP.
 
   ![image](https://github.com/user-attachments/assets/e0bee256-1bbc-48cd-a08f-912244d2e335)
   ![image](https://github.com/user-attachments/assets/1f76ae64-3ba6-4710-83f3-cf73b13af076)
- ![image](https://github.com/user-attachments/assets/40b3d501-d14e-44ea-a6b3-e7ee5686f760)
- ![image](https://github.com/user-attachments/assets/6ce566fa-6b58-4586-b38b-7c4faa612a58)
+  ![image](https://github.com/user-attachments/assets/40b3d501-d14e-44ea-a6b3-e7ee5686f760)
+  ![image](https://github.com/user-attachments/assets/6ce566fa-6b58-4586-b38b-7c4faa612a58)
 
 - To activate the updated settings from the Azure Portal, restart Client-1
   
- ![image](https://github.com/user-attachments/assets/ecbf768e-f7f9-464c-a372-92bb2ac6d30a)
+  ![image](https://github.com/user-attachments/assets/ecbf768e-f7f9-464c-a372-92bb2ac6d30a)
 
-RDP/login into Client-1 and attempt to ping DC-1’s private IP address
- - Ensure the ping succeeds
+- RDP/login into Client-1 and attempt to ping DC-1’s private IP address
 
-  ![image](https://github.com/user-attachments/assets/301aed2e-ba45-4712-ae3b-e1f009067966)
-  ![image](https://github.com/user-attachments/assets/1054bccf-bbd7-4dc6-ae8c-5c574aaa06a7)
+   ![image](https://github.com/user-attachments/assets/301aed2e-ba45-4712-ae3b-e1f009067966)
+   ![image](https://github.com/user-attachments/assets/1054bccf-bbd7-4dc6-ae8c-5c574aaa06a7)
+   
  - Ensure the ping succeeds
-  ![image](https://github.com/user-attachments/assets/f71ca7f2-60e7-4c50-8688-0f0315a05caf)
+   ![image](https://github.com/user-attachments/assets/f71ca7f2-60e7-4c50-8688-0f0315a05caf)
  - From Client-1, open PowerShell and run ipconfig /all
-	• The output for the DNS settings should show DC-1’s private IP 
-	Address
-![image](https://github.com/user-attachments/assets/146d3f33-2a50-4798-9287-1a9d5a4b97a1)
-
-
-
-
-
+   - The output for the DNS settings should show DC-1’s private IP Address
+   ![image](https://github.com/user-attachments/assets/c054c219-9648-4337-8eb1-7b097a34b58e)
+     
 
 PowerShell Script for User Creation:
 Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. This is an example of me creating users in Active Directory Domain Controller using Power Shell ISE. Write and run a PowerShell script to create 1,000 user accounts in Active Directory. Example script:
