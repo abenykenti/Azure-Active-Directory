@@ -74,41 +74,65 @@ Create the Domain Controller (DC) VM:
   ![image](https://github.com/user-attachments/assets/95ee63b1-7448-473a-a9b1-c24634ec37a6)
 
 - Install Active Directory Domain Services (AD DS) and promote the VM to a Domain Controller.
-  ![image]()
-  ![image]()
-  ![image]()
-  ![image]()
+  - RDP/login into DC-1 and install Active Directory Domain Services
+
+  ![image](https://github.com/user-attachments/assets/bdc34ab6-b628-4ba7-afa3-0c34a1f70ebb)
+
+  ![image](https://github.com/user-attachments/assets/d6caccf7-23ad-444e-a354-fadb32da4628)
+
+  ![image](https://github.com/user-attachments/assets/aceef685-94a8-4b26-9916-920e0e091eeb)
+
+  ![image](https://github.com/user-attachments/assets/17687740-0880-4d7c-93b5-4bee2febc094)
+
+  ![image](https://github.com/user-attachments/assets/98540afe-388e-44c6-a807-37f7cfbcceb6)
+
+  ![image](https://github.com/user-attachments/assets/12429596-7669-43ef-99de-b7f96141020a)
+
+  
+  ![image](https://github.com/user-attachments/assets/57d6e055-f8d3-4dc8-978d-f964168c2845)
+
+  ![image](https://github.com/user-attachments/assets/50134a9c-963c-4903-8e4e-4c93e331012a)
+
+
   
 - Configure the VM as a DNS server. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. This is a demonstration of me Using Wizard to install Active Directory.
 
-  ![image]()
-  ![image]()
+   ![image]()
+   ![image]()
+   ![image]()
+   ![image]()
 
 Create the Client Machine VM:
 - Deploy another Windows VM for the client.
+  
  ![image](https://github.com/user-attachments/assets/98460eff-ab81-4b22-9283-23d70c7e1cd9)
  ![image](https://github.com/user-attachments/assets/1cf36e37-6282-4780-a9e3-05cdb23c5c36)
 
 Join this VM to the domain controlled by the DC.
 - Configure the client’s DNS settings to point to the DC’s static IP.
 
-  ![image]()
-
-  ![image]()
-  ![image]()
-
+  ![image](https://github.com/user-attachments/assets/e0bee256-1bbc-48cd-a08f-912244d2e335)
+  ![image](https://github.com/user-attachments/assets/1f76ae64-3ba6-4710-83f3-cf73b13af076)
+ ![image](https://github.com/user-attachments/assets/40b3d501-d14e-44ea-a6b3-e7ee5686f760)
+ ![image](https://github.com/user-attachments/assets/6ce566fa-6b58-4586-b38b-7c4faa612a58)
 
 - To activate the updated settings from the Azure Portal, restart Client-1
+  
  ![image](https://github.com/user-attachments/assets/ecbf768e-f7f9-464c-a372-92bb2ac6d30a)
 
 RDP/login into Client-1 and attempt to ping DC-1’s private IP address
-	• Ensure the ping succeeds
-  
+ - Ensure the ping succeeds
 
-  ![image]()
+  ![image](https://github.com/user-attachments/assets/301aed2e-ba45-4712-ae3b-e1f009067966)
+  ![image](https://github.com/user-attachments/assets/1054bccf-bbd7-4dc6-ae8c-5c574aaa06a7)
+ - Ensure the ping succeeds
+  ![image](https://github.com/user-attachments/assets/f71ca7f2-60e7-4c50-8688-0f0315a05caf)
+ - From Client-1, open PowerShell and run ipconfig /all
+	• The output for the DNS settings should show DC-1’s private IP 
+	Address
+![image](https://github.com/user-attachments/assets/146d3f33-2a50-4798-9287-1a9d5a4b97a1)
 
-  ![image]()
-  ![image]()
+
 
 
 
