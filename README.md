@@ -53,25 +53,37 @@ Traffic Routing and Monitoring:
 Set Up Azure Resources:
 - Create a Resource Group to house the VMs and the virtual network.
 
-![image](https://github.com/user-attachments/assets/137cae6f-a387-4dc6-838f-ce5711cd5afa)
+  ![image](https://github.com/user-attachments/assets/137cae6f-a387-4dc6-838f-ce5711cd5afa)
 
 - Set up a Virtual Network (VNet) that the VMs will use to communicate.
 
- ![image](https://github.com/user-attachments/assets/b048c013-bff5-48c5-834a-4232f139f57a)
+  ![image](https://github.com/user-attachments/assets/b048c013-bff5-48c5-834a-4232f139f57a)
 
- ![image](https://github.com/user-attachments/assets/c34b05a9-b826-494f-91d8-8254fd077c8f)
+  ![image](https://github.com/user-attachments/assets/c34b05a9-b826-494f-91d8-8254fd077c8f)
 
 Create the Domain Controller (DC) VM:
 
 - In Azure, deploy a Windows Server VM that will function as your DC. Assign a static IP address to the VM for DNS consistency.
+  ![image](![image](https://github.com/user-attachments/assets/dca8d1f8-21d9-4b3a-b1ae-2f87e7e0ab55)
+)
+  ![image](![image](https://github.com/user-attachments/assets/db321eb1-f00c-4e5f-8bf9-4c590b05badd)
+)
+  ![image](![image](https://github.com/user-attachments/assets/96f2c7ce-2d79-4300-ad31-e5db9b4c1249)
+)
 - Install Active Directory Domain Services (AD DS) and promote the VM to a Domain Controller.
+  ![image]()
+  ![image]()
+  ![image]()
 - Configure the VM as a DNS server. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. This is a demonstration of me Using Wizard to install Active Directory.
 
-- 
-![image]()
+  ![image]()
+  ![image]()
 
 Create the Client Machine VM:
 Deploy another Windows VM for the client.
+  ![image](https://github.com/user-attachments/assets/98460eff-ab81-4b22-9283-23d70c7e1cd9)
+  ![image](https://github.com/user-attachments/assets/1cf36e37-6282-4780-a9e3-05cdb23c5c36)
+
 Join this VM to the domain controlled by the DC.
 Configure the client’s DNS settings to point to the DC’s static IP.
 ![image]()
