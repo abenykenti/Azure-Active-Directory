@@ -86,14 +86,17 @@ Create the Domain Controller (DC) VM:
 
 Create the Client Machine VM:
 Deploy another Windows VM for the client.
-  ![image](https://github.com/user-attachments/assets/98460eff-ab81-4b22-9283-23d70c7e1cd9)
-  ![image](https://github.com/user-attachments/assets/1cf36e37-6282-4780-a9e3-05cdb23c5c36)
+ ![image](https://github.com/user-attachments/assets/98460eff-ab81-4b22-9283-23d70c7e1cd9)
+ ![image](https://github.com/user-attachments/assets/1cf36e37-6282-4780-a9e3-05cdb23c5c36)
 
 Join this VM to the domain controlled by the DC.
 Configure the client’s DNS settings to point to the DC’s static IP.
- ![image]()
- ![image]()
- ![image]()
+
+ ![image](https://github.com/user-attachments/assets/3e67d252-0b5a-48e4-a662-d7236b63c2c7)
+ ![image](https://github.com/user-attachments/assets/b5dfa3bb-353d-478d-b353-d1a39059ceac)
+ ![image](https://github.com/user-attachments/assets/4ca70582-524c-4440-a3e4-75c03b55482c)
+ ![image](https://github.com/user-attachments/assets/48c9fd26-cc61-4fdf-8e06-72afa55ce830)
+
 
 PowerShell Script for User Creation:
 Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. This is an example of me creating users in Active Directory Domain Controller using Power Shell ISE. Write and run a PowerShell script to create 1,000 user accounts in Active Directory. Example script:
