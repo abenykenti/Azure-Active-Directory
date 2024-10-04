@@ -97,19 +97,19 @@ Create the Domain Controller (DC) VM:
 - AD is installed but not configured. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. 
 
 - Setup a new forest as mydomain.com (can be anything)
-    ![image](https://github.com/user-attachments/assets/8c015f29-c0b9-445a-8ea1-0ed52e1b06e1)
+  ![image](https://github.com/user-attachments/assets/8c015f29-c0b9-445a-8ea1-0ed52e1b06e1)
 
-    ![image](https://github.com/user-attachments/assets/2a8ca9a5-ab30-433a-943c-fae1af173488)
+  ![image](https://github.com/user-attachments/assets/2a8ca9a5-ab30-433a-943c-fae1af173488)
 
-    ![image](https://github.com/user-attachments/assets/5d7f0f78-423c-4f19-8ff8-927b229fd468)
+  ![image](https://github.com/user-attachments/assets/5d7f0f78-423c-4f19-8ff8-927b229fd468)
 
-    ![image](https://github.com/user-attachments/assets/da8ff662-3a77-455d-931d-96a015166e79)
+  ![image](https://github.com/user-attachments/assets/da8ff662-3a77-455d-931d-96a015166e79)
 
-    ![image](https://github.com/user-attachments/assets/80a4489d-dcbb-4119-8a16-0ef5071510b8)
+  ![image](https://github.com/user-attachments/assets/80a4489d-dcbb-4119-8a16-0ef5071510b8)
 
-   ![image](https://github.com/user-attachments/assets/07014171-246e-470b-bc88-8800de4ea580)
+  ![image](https://github.com/user-attachments/assets/07014171-246e-470b-bc88-8800de4ea580)
 
-   ![image](https://github.com/user-attachments/assets/fd9730a8-08aa-40e5-957e-6f3d090959a8)
+  ![image](https://github.com/user-attachments/assets/fd9730a8-08aa-40e5-957e-6f3d090959a8)
 
   ![image](https://github.com/user-attachments/assets/398a6570-af90-4f99-b966-90b40b56bdbd)
 
@@ -118,32 +118,33 @@ Create the Domain Controller (DC) VM:
 - Create Employees and Admins within the domain
   - In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
 
- ![image](https://github.com/user-attachments/assets/6e872265-d359-4aff-9e87-60c2a904b025)
+  ![image](https://github.com/user-attachments/assets/6e872265-d359-4aff-9e87-60c2a904b025)
 
- ![image](https://github.com/user-attachments/assets/e4c1fc2f-f5ff-4a0e-8134-483956292187)
+  ![image](https://github.com/user-attachments/assets/e4c1fc2f-f5ff-4a0e-8134-483956292187)
 
- - Create a new OU named “_ADMINS”
+  - Create a new OU named “_ADMINS”
 
- ![image](https://github.com/user-attachments/assets/77d4a286-9d48-474b-986d-cdb023181a88)
-)
- ![image](https://github.com/user-attachments/assets/d11e6092-22c9-4c97-a752-266cbbd8f5fa)
+   ![image](https://github.com/user-attachments/assets/77d4a286-9d48-474b-986d-cdb023181a88)
 
- ![image](https://github.com/user-attachments/assets/cd49b67e-dec2-400b-9d1a-882cc81f9e43)
+ - Create a new employee e.g named “Jane Doe”  with the username of “jane_admin” 
 
- ![image](https://github.com/user-attachments/assets/eee47533-49f1-4d17-9e5b-2624aad56d51)
+   ![image](https://github.com/user-attachments/assets/d11e6092-22c9-4c97-a752-266cbbd8f5fa)
 
- ![image](https://github.com/user-attachments/assets/dc8ecf3e-295e-402e-895d-2b72f65420aa)
+   ![image](https://github.com/user-attachments/assets/cd49b67e-dec2-400b-9d1a-882cc81f9e43)
 
- ![image](https://github.com/user-attachments/assets/42da13ff-e9e0-4235-85ad-bfb22bc76bb5)
+   ![image](https://github.com/user-attachments/assets/eee47533-49f1-4d17-9e5b-2624aad56d51)
 
- ![image](https://github.com/user-attachments/assets/6c88bdcb-e602-4bd5-b949-39a4a0fe2f48)
+   ![image](https://github.com/user-attachments/assets/42da13ff-e9e0-4235-85ad-bfb22bc76bb5)
 
- ![image](https://github.com/user-attachments/assets/c4cf1d4d-3615-4d12-b846-b5c756fb37af)
+ 
+- Add jane_admin to the “Domain Admins” Security Group to become an Admin.
+  
+   ![image](https://github.com/user-attachments/assets/6c88bdcb-e602-4bd5-b949-39a4a0fe2f48)
 
-![image]()
-![image]()
-![image]()
-![image]()
+   ![image](https://github.com/user-attachments/assets/c4cf1d4d-3615-4d12-b846-b5c756fb37af)
+
+   ![image](https://github.com/user-attachments/assets/c45186b8-cf82-4e62-ad0f-28fe28244d66)
+
 
 Create the Client Machine VM:
 - Deploy another Windows VM for the client.
@@ -161,26 +162,30 @@ Join this VM to the domain controlled by the DC.
 
 - To activate the updated settings from the Azure Portal, restart Client-1
   
-  ![image](https://github.com/user-attachments/assets/ecbf768e-f7f9-464c-a372-92bb2ac6d30a)
+   ![image](https://github.com/user-attachments/assets/ecbf768e-f7f9-464c-a372-92bb2ac6d30a)
 
 - RDP/login into Client-1 and attempt to ping DC-1’s private IP address
 
-   ![image](https://github.com/user-attachments/assets/301aed2e-ba45-4712-ae3b-e1f009067966)
-   ![image](https://github.com/user-attachments/assets/1054bccf-bbd7-4dc6-ae8c-5c574aaa06a7)
+    ![image](https://github.com/user-attachments/assets/301aed2e-ba45-4712-ae3b-e1f009067966)
+    ![image](https://github.com/user-attachments/assets/1054bccf-bbd7-4dc6-ae8c-5c574aaa06a7)
    
  - Ensure the ping succeeds
-   ![image](https://github.com/user-attachments/assets/f71ca7f2-60e7-4c50-8688-0f0315a05caf)
+    ![image](https://github.com/user-attachments/assets/f71ca7f2-60e7-4c50-8688-0f0315a05caf)
+   
  - From Client-1, open PowerShell and run ipconfig /all
    - The output for the DNS settings should show DC-1’s private IP Address
-   ![image](https://github.com/user-attachments/assets/c054c219-9648-4337-8eb1-7b097a34b58e)
+     
+    ![image](https://github.com/user-attachments/assets/c054c219-9648-4337-8eb1-7b097a34b58e)
      
 
 PowerShell Script for User Creation:
 Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. This is an example of me creating users in Active Directory Domain Controller using Power Shell ISE. Write and run a PowerShell script to create 1,000 user accounts in Active Directory. Example script:
 powershell
-
+  ![image]()
+  ![image]()
+  ![image]()
 Ensure all users are created in a specific Organizational Unit (OU) for easier management.
-![image]()
+  ![image]()
 
 Configure Network Traffic Routing:
 Set up policies on the DC to route all internet traffic from the client machines through the Domain Controller.
