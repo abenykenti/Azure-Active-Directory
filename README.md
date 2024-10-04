@@ -85,17 +85,32 @@ Create the Domain Controller (DC) VM:
   ![image]()
 
 Create the Client Machine VM:
-Deploy another Windows VM for the client.
+- Deploy another Windows VM for the client.
  ![image](https://github.com/user-attachments/assets/98460eff-ab81-4b22-9283-23d70c7e1cd9)
  ![image](https://github.com/user-attachments/assets/1cf36e37-6282-4780-a9e3-05cdb23c5c36)
 
 Join this VM to the domain controlled by the DC.
-Configure the client’s DNS settings to point to the DC’s static IP.
+- Configure the client’s DNS settings to point to the DC’s static IP.
 
  ![image](https://github.com/user-attachments/assets/3e67d252-0b5a-48e4-a662-d7236b63c2c7)
  ![image](https://github.com/user-attachments/assets/b5dfa3bb-353d-478d-b353-d1a39059ceac)
  ![image](https://github.com/user-attachments/assets/4ca70582-524c-4440-a3e4-75c03b55482c)
  ![image](https://github.com/user-attachments/assets/48c9fd26-cc61-4fdf-8e06-72afa55ce830)
+
+- To activate the updated settings from the Azure Portal, restart Client-1
+ ![image](https://github.com/user-attachments/assets/ecbf768e-f7f9-464c-a372-92bb2ac6d30a)
+
+RDP/login into Client-1 and attempt to ping DC-1’s private IP address
+	• Ensure the ping succeeds
+  ![image](https://github.com/user-attachments/assets/26e56ff8-7aa5-4a1e-a800-58353a63bfdb)
+  ![image](https://github.com/user-attachments/assets/bd421cac-bf38-4758-8631-5ce416d0a6df)
+
+  ![image]()
+
+  ![image]()
+  ![image]()
+
+
 
 
 PowerShell Script for User Creation:
