@@ -12,8 +12,6 @@ This lab outlines a hands-on project for implementing an on-premises Active Dire
 ![image](https://github.com/user-attachments/assets/7ed42b43-6042-49c4-94da-f567aceaa7d0)
 
 
-
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -39,7 +37,7 @@ Client Machine VM:
  - Configures DNS settings to use the DC’s IP address as the primary DNS server.
 
 PowerShell Script:
- - Generates 1,000 users in Active Directory to simulate a production environment.
+ - Generates 10,000 users in Active Directory to simulate a production environment.
 
 Traffic Routing and Monitoring:
  - The AD system monitors network traffic.
@@ -63,17 +61,24 @@ Set Up Azure Resources:
 
 Create the Domain Controller (DC) VM:
 
-- In Azure, deploy a Windows Server VM that will function as your DC. Assign a static IP address to the VM for DNS consistency.
-  ![image](![image](https://github.com/user-attachments/assets/dca8d1f8-21d9-4b3a-b1ae-2f87e7e0ab55)
-)
-  ![image](![image](https://github.com/user-attachments/assets/db321eb1-f00c-4e5f-8bf9-4c590b05badd)
-)
-  ![image](![image](https://github.com/user-attachments/assets/96f2c7ce-2d79-4300-ad31-e5db9b4c1249)
-)
+- In Azure, deploy a Windows Server VM that will function as your DC.
+  ![image](https://github.com/user-attachments/assets/dca8d1f8-21d9-4b3a-b1ae-2f87e7e0ab55)
+
+  ![image](https://github.com/user-attachments/assets/db321eb1-f00c-4e5f-8bf9-4c590b05badd)
+
+  ![image](https://github.com/user-attachments/assets/96f2c7ce-2d79-4300-ad31-e5db9b4c1249)
+
+- Assign a static IP address to the VM for DNS consistency.
+  ![image](https://github.com/user-attachments/assets/848f0dc4-8986-4d10-a71e-34990d6d15ea)
+
+  ![image](https://github.com/user-attachments/assets/95ee63b1-7448-473a-a9b1-c24634ec37a6)
+
 - Install Active Directory Domain Services (AD DS) and promote the VM to a Domain Controller.
   ![image]()
   ![image]()
   ![image]()
+  ![image]()
+  
 - Configure the VM as a DNS server. When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. This is a demonstration of me Using Wizard to install Active Directory.
 
   ![image]()
@@ -86,7 +91,9 @@ Deploy another Windows VM for the client.
 
 Join this VM to the domain controlled by the DC.
 Configure the client’s DNS settings to point to the DC’s static IP.
-![image]()
+ ![image]()
+ ![image]()
+ ![image]()
 
 PowerShell Script for User Creation:
 Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. This is an example of me creating users in Active Directory Domain Controller using Power Shell ISE. Write and run a PowerShell script to create 1,000 user accounts in Active Directory. Example script:
