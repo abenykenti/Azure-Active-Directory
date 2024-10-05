@@ -214,6 +214,7 @@ Create the Client Machine VM:
 
 
 Open system properties
+   ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
 
    ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
 
@@ -221,7 +222,8 @@ Open system properties
 
 
 - Allow “domain users” access to remote desktop
-You can now log into Client-1 as a normal, non-administrative user now
+ - You can now log into Client-1 as a normal, non-administrative user now
+ - 
    ![image](https://github.com/user-attachments/assets/85735c51-f48e-47a1-b44e-9e1939b7d9c1)
 
    ![image](https://github.com/user-attachments/assets/4a976fdf-5564-41cc-9ae0-3aae8e500379)
@@ -235,10 +237,10 @@ Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a
 
  - Login to DC-1 as jane_admin
 
-   ![image](https://github.com/user-attachments/assets/6ff9443a-96f8-425d-92da-c74ad67d514b)
+    ![image](https://github.com/user-attachments/assets/6ff9443a-96f8-425d-92da-c74ad67d514b)
 
 Open PowerShell_ise as an administrator
-   ![image](https://github.com/user-attachments/assets/bee2133b-0468-48f8-8c5d-407219885b23)
+    ![image](https://github.com/user-attachments/assets/bee2133b-0468-48f8-8c5d-407219885b23)
 
 
 
