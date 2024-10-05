@@ -214,7 +214,8 @@ Create the Client Machine VM:
 
 
 Open system properties
-   ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
+   ![image](https://github.com/user-attachments/assets/5cd93247-dcbc-4ed1-8560-27e1e5e0085d)
+
 
    ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
 
