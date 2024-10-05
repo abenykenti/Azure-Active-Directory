@@ -144,6 +144,8 @@ Create the Domain Controller (DC) VM:
    ![image](https://github.com/user-attachments/assets/c4cf1d4d-3615-4d12-b846-b5c756fb37af)
 
    ![image](https://github.com/user-attachments/assets/c45186b8-cf82-4e62-ad0f-28fe28244d66)
+- Log out/close the connection to DC-1 and log back in as “mydomain.com\jane_admin”. User jane_admin is now your admin account.
+   ![image](https://github.com/user-attachments/assets/e27ae859-3d37-4001-9998-751de5400ee6)
 
 
 Create the Client Machine VM:
@@ -152,7 +154,7 @@ Create the Client Machine VM:
   ![image](https://github.com/user-attachments/assets/98460eff-ab81-4b22-9283-23d70c7e1cd9)
   ![image](https://github.com/user-attachments/assets/1cf36e37-6282-4780-a9e3-05cdb23c5c36)
 
-Join this VM to the domain controlled by the DC.
+
 - Configure the client’s DNS settings to point to the DC’s static IP.
 
   ![image](https://github.com/user-attachments/assets/e0bee256-1bbc-48cd-a08f-912244d2e335)
@@ -176,38 +178,97 @@ Join this VM to the domain controlled by the DC.
    - The output for the DNS settings should show DC-1’s private IP Address
      
     ![image](https://github.com/user-attachments/assets/c054c219-9648-4337-8eb1-7b097a34b58e)
-     
+- Join this VM to the domain controlled by the DC.
+  - Login to Client-1 as the original local admin and join it to the domain (computer will restart at the end of process)
+ 
+    ![image](![image](https://github.com/user-attachments/assets/1c2e587d-0223-40c6-beb2-fe572f81731e)
+)
+    ![image](![image](https://github.com/user-attachments/assets/3bc8493f-6637-412e-9f0f-88d474903065)
+)
+    ![image](![image](https://github.com/user-attachments/assets/93c74962-17e5-4fd3-a540-1e421ffbf590)
+) 
+    ![image](![image](https://github.com/user-attachments/assets/2a5fd275-8d20-4025-988c-02acd244eed7)
+)
+    ![image](![image](https://github.com/user-attachments/assets/4dbe4e57-5a6e-442a-8001-ac6eee697ecb)
+)
+    ![image](![image](https://github.com/user-attachments/assets/905685e1-06f4-46b1-8478-84fef0b20c7f)
+)
+    ![image](![image](https://github.com/user-attachments/assets/c075364e-f671-4d41-a256-2c5807e8f6a2)
+
+ - Login to the Domain Controller and verify Client-1 shows up in ADUC
+
+    ![image](![image](https://github.com/user-attachments/assets/88ad6632-1c73-41b4-b087-3b2b3edca35e)
+
+
+   ![image](![image](https://github.com/user-attachments/assets/34be90d7-2437-43d5-b216-808e7797e6c7)
+
+   ![image](![image](https://github.com/user-attachments/assets/45200214-6cc9-4063-9e2f-a3f9b7d16bb1)
+
+
+ - Create a new OU named “_CLIENTS” and drag Client-1 into there
+   ![image](![image](https://github.com/user-attachments/assets/914d0c41-bfec-4746-8e7e-33fd3df7b866)
+
+- Setup Remote Desktop for non-administrative users on Client-1
+  - Log into Client-1 as mydomain.com\jane_admin!
+  ![image](![image](https://github.com/user-attachments/assets/f61a2879-386f-453d-a2f0-98c2597dcb44)
+
+
+Open system properties
+  ![image](https://github.com/user-attachments/assets/bb4133d2-3e0e-4e5d-b023-5ad6673989e5)
+
+
+  ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
+
+  ![image](https://github.com/user-attachments/assets/b2c9710a-23d7-42ea-9541-d6de01df6631)
+
+
+- Allow “domain users” access to remote desktop
+You can now log into Client-1 as a normal, non-administrative user now
+  ![image](https://github.com/user-attachments/assets/85735c51-f48e-47a1-b44e-9e1939b7d9c1)
+
+  ![image](https://github.com/user-attachments/assets/4a976fdf-5564-41cc-9ae0-3aae8e500379)
+
+  ![image](https://github.com/user-attachments/assets/32e5d9b8-f0d5-42df-a3d2-5d1c844f6c38)
+
+  ![image](https://github.com/user-attachments/assets/34884699-1386-4a16-89c0-7ee057fc42d2)
 
 PowerShell Script for User Creation:
-Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. This is an example of me creating users in Active Directory Domain Controller using Power Shell ISE. Write and run a PowerShell script to create 1,000 user accounts in Active Directory. Example script:
-powershell
-  ![image]()
-  ![image]()
-  ![image]()
-Ensure all users are created in a specific Organizational Unit (OU) for easier management.
-  ![image]()
+Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. Create 1,000 user accounts in Active Directory and attempt to log into client-1 with one of the users
 
-Configure Network Traffic Routing:
-Set up policies on the DC to route all internet traffic from the client machines through the Domain Controller.
-This can be done using Group Policy settings for DNS forwarding, firewall rules, and network traffic rules.
+ - Login to DC-1 as jane_admin
 
+   ![image](https://github.com/user-attachments/assets/6ff9443a-96f8-425d-92da-c74ad67d514b)
+
+Open PowerShell_ise as an administrator
+Run the script and observe the accounts being created
+
+   ![image](https://github.com/user-attachments/assets/bee2133b-0468-48f8-8c5d-407219885b23)
+
+
+
+   ![image](https://github.com/user-attachments/assets/5021d41e-cb30-46d5-9d0f-991fea650276)
+
+   ![image](https://github.com/user-attachments/assets/af73f7eb-6166-4927-afff-272f6429d6bb)
+
+   ![image](https://github.com/user-attachments/assets/8df10b10-040f-43ca-8fb4-7320eff0a1b9)
+
+ 
+Ensure all users are created in a specific Organizational Unit (OU) for easier management. e.g When finished, open ADUC and observe the accounts in the appropriate OU　(_EMPLOYEES)
+
+   ![image](https://github.com/user-attachments/assets/13e7eedd-acc2-427e-8b93-a4a3b9bcdc41)
+
+   ![image](https://github.com/user-attachments/assets/d0a1be7d-3c32-4142-9bf7-269aec6810c4)
+
+   ![image](https://github.com/user-attachments/assets/c650dd44-c3db-460d-956d-4be77453c75d)
+
+  
+The end! You have completed the project!
 
 </p>
 <br />
 
 <p>
 
-![image]()
-
-</p>
-<p>
-When using Wizard to install Active Directory checks are done to see if the server meets the necessary requirements to become a Domain Controller. The Wizard checks operating system version, network configuration and hardware specification. This is a demonstration of me Using Wizard to install Active Directory.
-</p>
-<br />
-
-<p>
-
-![image]()
 
 </p>
 <p>
