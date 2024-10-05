@@ -206,31 +206,29 @@ Create the Client Machine VM:
 
 
  - Create a new OU named “_CLIENTS” and drag Client-1 into there
-   ![image](https://github.com/user-attachments/assets/914d0c41-bfec-4746-8e7e-33fd3df7b866)
+    ![image](https://github.com/user-attachments/assets/914d0c41-bfec-4746-8e7e-33fd3df7b866)
 
 - Setup Remote Desktop for non-administrative users on Client-1
   - Log into Client-1 as mydomain.com\jane_admin!
-  ![image](https://github.com/user-attachments/assets/f61a2879-386f-453d-a2f0-98c2597dcb44)
+   ![image](https://github.com/user-attachments/assets/f61a2879-386f-453d-a2f0-98c2597dcb44)
 
 
 Open system properties
-  ![image](https://github.com/user-attachments/assets/bb4133d2-3e0e-4e5d-b023-5ad6673989e5)
 
+   ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
 
-  ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
-
-  ![image](https://github.com/user-attachments/assets/b2c9710a-23d7-42ea-9541-d6de01df6631)
+   ![image](https://github.com/user-attachments/assets/b2c9710a-23d7-42ea-9541-d6de01df6631)
 
 
 - Allow “domain users” access to remote desktop
 You can now log into Client-1 as a normal, non-administrative user now
-  ![image](https://github.com/user-attachments/assets/85735c51-f48e-47a1-b44e-9e1939b7d9c1)
+   ![image](https://github.com/user-attachments/assets/85735c51-f48e-47a1-b44e-9e1939b7d9c1)
 
-  ![image](https://github.com/user-attachments/assets/4a976fdf-5564-41cc-9ae0-3aae8e500379)
+   ![image](https://github.com/user-attachments/assets/4a976fdf-5564-41cc-9ae0-3aae8e500379)
 
-  ![image](https://github.com/user-attachments/assets/32e5d9b8-f0d5-42df-a3d2-5d1c844f6c38)
+   ![image](https://github.com/user-attachments/assets/32e5d9b8-f0d5-42df-a3d2-5d1c844f6c38)
 
-  ![image](https://github.com/user-attachments/assets/34884699-1386-4a16-89c0-7ee057fc42d2)
+   ![image](https://github.com/user-attachments/assets/34884699-1386-4a16-89c0-7ee057fc42d2)
 
 PowerShell Script for User Creation:
 Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. Create 1,000 user accounts in Active Directory and attempt to log into client-1 with one of the users
@@ -240,8 +238,6 @@ Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a
    ![image](https://github.com/user-attachments/assets/6ff9443a-96f8-425d-92da-c74ad67d514b)
 
 Open PowerShell_ise as an administrator
-Run the script and observe the accounts being created
-
    ![image](https://github.com/user-attachments/assets/bee2133b-0468-48f8-8c5d-407219885b23)
 
 
