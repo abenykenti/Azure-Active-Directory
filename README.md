@@ -181,36 +181,36 @@ Create the Client Machine VM:
 - Join this VM to the domain controlled by the DC.
   - Login to Client-1 as the original local admin and join it to the domain (computer will restart at the end of process)
  
-    ![image](![image](https://github.com/user-attachments/assets/1c2e587d-0223-40c6-beb2-fe572f81731e)
-)
-    ![image](![image](https://github.com/user-attachments/assets/3bc8493f-6637-412e-9f0f-88d474903065)
-)
-    ![image](![image](https://github.com/user-attachments/assets/93c74962-17e5-4fd3-a540-1e421ffbf590)
-) 
-    ![image](![image](https://github.com/user-attachments/assets/2a5fd275-8d20-4025-988c-02acd244eed7)
-)
-    ![image](![image](https://github.com/user-attachments/assets/4dbe4e57-5a6e-442a-8001-ac6eee697ecb)
-)
-    ![image](![image](https://github.com/user-attachments/assets/905685e1-06f4-46b1-8478-84fef0b20c7f)
-)
-    ![image](![image](https://github.com/user-attachments/assets/c075364e-f671-4d41-a256-2c5807e8f6a2)
+    ![image](https://github.com/user-attachments/assets/1c2e587d-0223-40c6-beb2-fe572f81731e)
+
+    ![image](https://github.com/user-attachments/assets/3bc8493f-6637-412e-9f0f-88d474903065)
+
+    ![image](https://github.com/user-attachments/assets/93c74962-17e5-4fd3-a540-1e421ffbf590)
+
+    ![image](https://github.com/user-attachments/assets/2a5fd275-8d20-4025-988c-02acd244eed7)
+
+    ![image](https://github.com/user-attachments/assets/4dbe4e57-5a6e-442a-8001-ac6eee697ecb)
+
+    ![image](https://github.com/user-attachments/assets/905685e1-06f4-46b1-8478-84fef0b20c7f)
+
+    ![image](https://github.com/user-attachments/assets/c075364e-f671-4d41-a256-2c5807e8f6a2)
 
  - Login to the Domain Controller and verify Client-1 shows up in ADUC
 
-    ![image](![image](https://github.com/user-attachments/assets/88ad6632-1c73-41b4-b087-3b2b3edca35e)
+    ![image](https://github.com/user-attachments/assets/88ad6632-1c73-41b4-b087-3b2b3edca35e)
 
 
-   ![image](![image](https://github.com/user-attachments/assets/34be90d7-2437-43d5-b216-808e7797e6c7)
+   ![image](https://github.com/user-attachments/assets/34be90d7-2437-43d5-b216-808e7797e6c7)
 
-   ![image](![image](https://github.com/user-attachments/assets/45200214-6cc9-4063-9e2f-a3f9b7d16bb1)
+   ![image](https://github.com/user-attachments/assets/45200214-6cc9-4063-9e2f-a3f9b7d16bb1)
 
 
  - Create a new OU named “_CLIENTS” and drag Client-1 into there
-   ![image](![image](https://github.com/user-attachments/assets/914d0c41-bfec-4746-8e7e-33fd3df7b866)
+   ![image](https://github.com/user-attachments/assets/914d0c41-bfec-4746-8e7e-33fd3df7b866)
 
 - Setup Remote Desktop for non-administrative users on Client-1
   - Log into Client-1 as mydomain.com\jane_admin!
-  ![image](![image](https://github.com/user-attachments/assets/f61a2879-386f-453d-a2f0-98c2597dcb44)
+  ![image](https://github.com/user-attachments/assets/f61a2879-386f-453d-a2f0-98c2597dcb44)
 
 
 Open system properties
