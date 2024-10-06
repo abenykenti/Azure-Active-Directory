@@ -213,51 +213,51 @@ Create the Client Machine VM:
    ![image](https://github.com/user-attachments/assets/f61a2879-386f-453d-a2f0-98c2597dcb44)
 
 
-Open system properties
-   ![image](https://github.com/user-attachments/assets/d7d6e247-0e04-4a81-aaf2-bf1b361177a2)
+- Open system properties
+    ![image](https://github.com/user-attachments/assets/d7d6e247-0e04-4a81-aaf2-bf1b361177a2)
 
-   ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
+    ![image](https://github.com/user-attachments/assets/76f89c32-8904-4cc6-9e5c-f486f7baefe0)
 
-   ![image](https://github.com/user-attachments/assets/b2c9710a-23d7-42ea-9541-d6de01df6631)
+    ![image](https://github.com/user-attachments/assets/b2c9710a-23d7-42ea-9541-d6de01df6631)
 
 
 - Allow “domain users” access to remote desktop
  - You can now log into Client-1 as a normal, non-administrative user now
- - 
-   ![image](https://github.com/user-attachments/assets/85735c51-f48e-47a1-b44e-9e1939b7d9c1)
+   
+    ![image](https://github.com/user-attachments/assets/85735c51-f48e-47a1-b44e-9e1939b7d9c1)
 
-   ![image](https://github.com/user-attachments/assets/4a976fdf-5564-41cc-9ae0-3aae8e500379)
+    ![image](https://github.com/user-attachments/assets/4a976fdf-5564-41cc-9ae0-3aae8e500379)
 
-   ![image](https://github.com/user-attachments/assets/32e5d9b8-f0d5-42df-a3d2-5d1c844f6c38)
+    ![image](https://github.com/user-attachments/assets/32e5d9b8-f0d5-42df-a3d2-5d1c844f6c38)
 
-   ![image](https://github.com/user-attachments/assets/34884699-1386-4a16-89c0-7ee057fc42d2)
+    ![image](https://github.com/user-attachments/assets/34884699-1386-4a16-89c0-7ee057fc42d2)
 
 PowerShell Script for User Creation:
 Power Shell ISE Stands for Power Shell Integrated Scripting Environment. It is a scripting tool provided by Microsoft to write and edit Power Shell scripts. It provide a great environment for writing, editing and debugging capabilities. Create 1,000 user accounts in Active Directory and attempt to log into client-1 with one of the users
 
  - Login to DC-1 as jane_admin
 
-    ![image](https://github.com/user-attachments/assets/6ff9443a-96f8-425d-92da-c74ad67d514b)
+     ![image](https://github.com/user-attachments/assets/6ff9443a-96f8-425d-92da-c74ad67d514b)
 
 Open PowerShell_ise as an administrator
-    ![image](https://github.com/user-attachments/assets/bee2133b-0468-48f8-8c5d-407219885b23)
+     ![image](https://github.com/user-attachments/assets/bee2133b-0468-48f8-8c5d-407219885b23)
 
 
 
-   ![image](https://github.com/user-attachments/assets/5021d41e-cb30-46d5-9d0f-991fea650276)
+    ![image](https://github.com/user-attachments/assets/5021d41e-cb30-46d5-9d0f-991fea650276)
 
-   ![image](https://github.com/user-attachments/assets/af73f7eb-6166-4927-afff-272f6429d6bb)
+    ![image](https://github.com/user-attachments/assets/af73f7eb-6166-4927-afff-272f6429d6bb)
 
-   ![image](https://github.com/user-attachments/assets/8df10b10-040f-43ca-8fb4-7320eff0a1b9)
+    ![image](https://github.com/user-attachments/assets/8df10b10-040f-43ca-8fb4-7320eff0a1b9)
 
  
 Ensure all users are created in a specific Organizational Unit (OU) for easier management. e.g When finished, open ADUC and observe the accounts in the appropriate OU　(_EMPLOYEES)
 
-   ![image](https://github.com/user-attachments/assets/13e7eedd-acc2-427e-8b93-a4a3b9bcdc41)
+    ![image](https://github.com/user-attachments/assets/13e7eedd-acc2-427e-8b93-a4a3b9bcdc41)
 
-   ![image](https://github.com/user-attachments/assets/d0a1be7d-3c32-4142-9bf7-269aec6810c4)
+    ![image](https://github.com/user-attachments/assets/d0a1be7d-3c32-4142-9bf7-269aec6810c4)
 
-   ![image](https://github.com/user-attachments/assets/c650dd44-c3db-460d-956d-4be77453c75d)
+    ![image](https://github.com/user-attachments/assets/c650dd44-c3db-460d-956d-4be77453c75d)
 
   
 The end! You have completed the project!
