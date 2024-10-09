@@ -122,6 +122,7 @@ for ($i=1; $i -le 10000; $i++) {
 
 Write-Host "10,000 users created successfully!"
 ```
+</details>
 
 ## Conclusion
 
