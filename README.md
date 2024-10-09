@@ -121,9 +121,12 @@ for ($i=1; $i -le 10000; $i++) {
 }
 
 Write-Host "10,000 users created successfully!"
-
+```
 
 ## Conclusion
+
+<br>
+
 
 This project demonstrated the deployment of a simulated on-premises Active Directory environment in the cloud using Azure VMs. Key highlights include:
 
@@ -132,3 +135,4 @@ This project demonstrated the deployment of a simulated on-premises Active Direc
 - Routing all network traffic through a centralized Domain Controller, allowing for monitoring of network activities.
 
 The end!
+<br>
